@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function remove(string) {
+            if (string.endsWith('!') !== true) {
+                return string;
+            } else {
+                return remove(string.slice(0, -1));
+            }
+        }
+        let a = remove('!Hi!Hi Hi!!!!!!!!!!!G!!!');
+        console.log(a);
+
+        // while (s[s.length - 1] === '!') {
+        //     s = s.slice(0, -1);
+        // return s.charAt(s.length - 1) === '!' ? remove(s.slice(0, s.length - 1)) : s;
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cascading Subsets</title>
+</head>
+
+<body>
+    <script>
+        // function eachCons(array, n) {
+        //     return a = array.slice(0, n - 1);
+        //     eachCons()
+        // }
+        // eachCons([3, 5, 8, 13], 3);
+        // console.log(a);
+
+        // function unflat(array, n) {
+        //     const resultArr = [];
+        //     for (let start = 0, end = n; start < array.length, end <= array.length; start += (n - 1), end += n - 1)
+        //         resultArr.push(array.slice(start, end));
+        //     return resultArr;
+        // }
+        // console.log(unflat([3, 5, 8, 13], 2));
+
+        function eachCons(arr, n) {
+            let result = [];
+            for (let i = 0; i < arr.length; i++) {
+                result.push(arr.slice(i, i + n))
+            }
+            return result.filter(e => e.length === n) //Нужно чтобы вернуть один ммассив(какой-то трюк)
+        }
+        console.log(eachCons([3, 5, 8, 13], 2))
+    </script>
+</body>
+
+</html>

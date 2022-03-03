@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const a = {
+            'Mike': 'aye',
+            'Joe': 'aye',
+            'Johnson': 'aye',
+            'Peter': 'aye'
+        };
+        const b = {
+            'Mike': 'aye',
+            'Joe': 'nay',
+            'Johnson': 'aye',
+            'Peter': 'aye'
+        };
+
+        const cannonsReady = (gunners) => {
+            const str = checkString();
+
+            function checkString() {
+                let readyString = '';
+                for (let gunner in gunners) {
+                    readyString += gunners[gunner];
+                }
+                return readyString;
+            }
+            if (str.includes('nay')) {
+                return 'Shiver me timbers!';
+            }
+            return 'Fire!';
+        }
+        cannonsReady(a);
+        cannonsReady(b);
+    </script>
+</body>
+
+</html>
