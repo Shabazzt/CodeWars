@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Largest 5 digit number in a series</title>
+</head>
+
+<body>
+    <script>
+        function solution(digits) {
+            let answer = 0;
+            const array = [];
+
+            for (let i = 0; i < digits.length; i++) {
+                let number = digits.substr(i, 5); //each loop iteration pulls the next 5 digits into a substring
+                array.push(number); //Просто для проверки какие числа в массиве
+                if (Number(number) > answer) { //convert to number and compare against answer
+                    answer = Number(number);
+                }
+            }
+            console.log(array); //Для проверки какие числа в массиве
+            return answer;
+        }
+        solution('731671765313306249192251123863050715693290963295');
+    </script>
+</body>
+
+</html>

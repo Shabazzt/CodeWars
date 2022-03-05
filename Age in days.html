@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Age in days</title>
+</head>
+
+<body>
+    <script>
+        function ageInDays(year, month, day) {
+            const tranlateIntoDays = 1000 * 60 * 60 * 24;
+            const birthday = new Date(year, month - 1, day).getTime();
+            const currentDate = new Date().getTime();
+            const howManyDaysYouOld = Math.floor((currentDate - birthday) / tranlateIntoDays);
+
+            console.log(birthday);
+            console.log(currentDate);
+            console.log(howManyDaysYouOld, 'days');
+            return `You are ${howManyDaysYouOld} days old`;
+        }
+        ageInDays(2015, 11, 1);
+        //const ageInDays = (y, m, d) => 'You are ' + (new Date() - new Date().setFullYear(y, m - 1, d)) / 86400000 + ' days old';
+        //Сокращенная запись
+    </script>
+</body>
+
+</html>

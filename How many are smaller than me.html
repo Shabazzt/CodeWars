@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How many are smaller than me?</title>
+</head>
+
+<body>
+    <script>
+        function smaller(nums) {
+            const resultArray = [];
+            for (let i = 0; i < nums.length; i++) {
+                let counter = 0;
+                for (let j = i + 1; j < nums.length; j++) {
+                    if (nums[i] > nums[j]) {
+                        counter++;
+                    }
+                }
+                resultArray.push(counter);
+            }
+            console.log(resultArray);
+            return resultArray;
+        }
+        smaller([5, 4, 7, 9, 2, 4, 4, 5, 6]);
+        //Короткая запись, сам до такого еще ни разу не додумался:)В начале, всегда сложно
+        //const smaller = nums => nums.map((val, idx) => nums.slice(++idx).filter(v => v < val).length);
+    </script>
+</body>
+
+</html>
