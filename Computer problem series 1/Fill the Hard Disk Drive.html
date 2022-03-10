@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Computer problem series #1: Fill the Hard Disk Drive</title>
+</head>
+
+<body>
+    <script>
+        function save(sizes, hd) {
+            const array = [];
+            let sum = 0;
+            for (let i = 0; i <= sizes.length; i++) {
+                sum += sizes[i];
+                if (sum <= hd) {
+                    array.push(sizes[i]);
+                }
+            }
+            console.log(array.length);
+            console.log(array);
+        }
+        save([4, 4, 4, 3, 3], 12);
+        //const save = ([h, ...t], hd) => h <= hd ? 1 + save(t, hd - h) : 0
+        //Разобраться, что за заклинание
+    </script>
+</body>
+
+</html>
